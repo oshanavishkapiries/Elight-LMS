@@ -1,3 +1,5 @@
+import SubFooter from "@/components/sub/SubFooter";
+import SubNav from "@/components/sub/SubNav";
 import React from "react";
 
 const layout = ({
@@ -7,11 +9,9 @@ const layout = ({
 }>) => {
   return (
     <>
-    Navbar
-      <main className="min-h-screen w-full bg-red-400">
+      <main className="min-h-screen w-full">
         {children}
       </main>
-    Footer
     </>
   );
 };
