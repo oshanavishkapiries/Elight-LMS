@@ -13,7 +13,7 @@ export const general: IGeneral = {
     meta_name: "Elight LMS",
     meta_description: "Learning Management System",
     img: {
-        lbanner_img: "/img/lbannerImg.jpg",
+        lbanner_img: "/img/landingHero.jpg",
         login_img: "/img/loginImg.jpg"
     }
 }
