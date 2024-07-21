@@ -1,9 +1,9 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
-import { MenuIcon, MountainIcon } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { MenuIcon, MountainIcon } from "lucide-react";
 
-import { navLinks } from "@/data/navLinks"
+import { navLinks } from "@/data/navLinks";
 
 const MobileNav = () => {
   return (
@@ -26,14 +26,16 @@ const MobileNav = () => {
               {link.name}
             </Link>
           ))}
-          <Button variant="outline" className="w-full">
-            Login
-          </Button>
+          <Link href="/auth/login" prefetch={false}>
+            <Button variant="outline" className="w-full">
+              Login
+            </Button>
+          </Link>
         </div>
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
 
 const Navbar = () => {
   return (
@@ -55,13 +57,15 @@ const Navbar = () => {
         ))}
       </nav>
       <div className="flex items-center gap-2">
-        <Button variant="outline" className="hidden sm:inline-flex">
-          Login
-        </Button>
+        <Link href="/auth/login" prefetch={false}>
+          <Button variant="outline" className="hidden sm:inline-flex">
+            Login
+          </Button>
+        </Link>
         <MobileNav />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 
 const LoginPage = () => {
   return (
-    <div className="w-full min-h-screen flex justify-center items-center bg-primary/50">
+    <div className="w-full min-h-screen flex justify-center items-center bg-gray-100">
       <Card className="w-4/5 md:w-2/3 h-auto grid grid-cols-1 md:grid-cols-2 overflow-hidden">
         <div className="w-full h-[450px] hidden md:block">
           <Image
