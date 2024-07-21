@@ -10,7 +10,7 @@ const layout = ({
   return (
     <>
     <Navbar />
-      <main className="min-h-screen w-full px-[1%] sm:px-[3%] md:px-[6%] lg:px-[9%] xl:px-[12%]">
+      <main className="min-h-screen max-w-7xl mx-auto px-3 sm:px-5 md:px-7">
         {children}
       </main>
     <Footer />
