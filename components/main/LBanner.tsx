@@ -1,3 +1,5 @@
+import { general } from "@/data/general";
+
 const LBanner = () => {
   return (
     <div className="w-full  overflow-hidden grid  grid-cols-1 md:grid-cols-2">
@@ -13,7 +15,7 @@ const LBanner = () => {
 
       {/* Right side */}
       <div className="w-full h-full order-1 md:order-2 justify-center flex p-5 md:p-0">
-        <img src="/img/landingHero.jpg" className="object-cover" />
+        <img src={general.img.lbanner_img} className="object-cover" />
       </div>
     </div>
   );
