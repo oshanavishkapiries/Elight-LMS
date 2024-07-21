@@ -9,11 +9,11 @@ const layout = ({
 }>) => {
   return (
     <>
-    <Navbar />
-      <main className="min-h-screen max-w-7xl mx-auto px-3 sm:px-5 md:px-7">
+      <Navbar />
+      <main className="min-h-screen max-w-7xl mx-auto sm:px-5 md:px-7">
         {children}
       </main>
-    <Footer />
+      <Footer />
     </>
   );
 };
