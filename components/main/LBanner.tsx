@@ -2,7 +2,7 @@ import { general } from "@/data/general";
 
 const LBanner = () => {
   return (
-    <div className="w-full  overflow-hidden grid  grid-cols-1 md:grid-cols-2">
+    <div className="w-full  overflow-hidden grid my-10 grid-cols-1 md:grid-cols-2">
       {/* Left side */}
       <div className="w-full h-full order-2 md:order-1 text-center md:text-left justify-center flex flex-col ">
         <h6 className=" text-stone-900 text-[12px] font-normal uppercase ">
