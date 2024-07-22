@@ -1,5 +1,3 @@
-import SubFooter from "@/components/sub/SubFooter";
-import SubNav from "@/components/sub/SubNav";
 import React from "react";
 
 const layout = ({
