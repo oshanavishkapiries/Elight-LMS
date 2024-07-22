@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { MenuIcon, MountainIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 
 import { navLinks } from "@/data/navLinks";
+import { general } from "@/data/general";
+import GlobalImage from "../sub/GlobalImage";
 
 const MobileNav = () => {
   return (
@@ -40,9 +42,15 @@ const MobileNav = () => {
 const Navbar = () => {
   return (
     <header className="flex h-16 w-full items-center justify-between bg-background px-4 sm:px-6">
-      <Link href="#" className="flex items-center gap-2" prefetch={false}>
-        <MountainIcon className="h-6 w-6" />
-        <span className="text-lg font-semibold">Acme Inc</span>
+      <Link href="/" className="flex items-center gap-2" prefetch={false}>
+        <GlobalImage
+          src={general.img.logo_img}
+          className="h-10 w-10"
+          alt={"logo"}
+          width={40}
+          height={40}
+        />
+        <span className="text-lg font-semibold">Elight LMS</span>
       </Link>
       <nav className="hidden items-center gap-6 md:flex">
         {navLinks.map((link) => (

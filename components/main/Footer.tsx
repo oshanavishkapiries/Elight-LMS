@@ -1,79 +1,48 @@
-import { MountainIcon } from "lucide-react"
-import Link from "next/link"
+import { MountainIcon } from "lucide-react";
+import Link from "next/link";
+import { footerData } from "@/data/footerData";
+import GlobalImage from "../sub/GlobalImage";
 
 const Footer = () => {
   return (
     <footer className="bg-muted py-12 w-full">
-    <div className="container max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div className="flex flex-col items-start gap-4">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <MountainIcon className="h-6 w-6" />
-          <span className="text-lg font-semibold">Acme Inc.</span>
-        </Link>
+      <div className="container max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-col items-start gap-4">
+          <Link href={footerData.company.link} className="flex items-center gap-2" prefetch={false}>
+          <GlobalImage
+          src={footerData.company.logo}
+          className="h-10 w-10"
+          alt={"logo"}
+          width={40}
+          height={40}
+        />
+            <span className="text-lg font-semibold">{footerData.company.name}</span>
+          </Link>
+        </div>
+        {footerData.sections.map((section, index) => (
+          <div key={index} className="grid gap-4">
+            <h3 className="text-lg font-semibold">{section.title}</h3>
+            <nav className="grid gap-2">
+              {section.links.map((link, linkIndex) => (
+                <Link key={linkIndex} href={link.href} className="text-sm text-muted-foreground hover:underline" prefetch={false}>
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        ))}
       </div>
-      <div className="grid gap-4">
-        <h3 className="text-lg font-semibold">Resources</h3>
-        <nav className="grid gap-2">
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Documentation
+      <div className="container max-w-7xl mt-12 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+        <p>&copy; {footerData.footer.year} {footerData.footer.companyName}. All rights reserved.</p>
+        <p>
+          Built with{" "}
+          <Link href={footerData.footer.builtWith.link} className="text-muted-foreground hover:underline" prefetch={false}>
+            {footerData.footer.builtWith.name}
           </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Guides
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Blog
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Support
-          </Link>
-        </nav>
+        </p>
       </div>
-      <div className="grid gap-4">
-        <h3 className="text-lg font-semibold">Legal</h3>
-        <nav className="grid gap-2">
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Terms of Service
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Privacy Policy
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Cookie Policy
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Trademark
-          </Link>
-        </nav>
-      </div>
-      <div className="grid gap-4">
-        <h3 className="text-lg font-semibold">Navigation</h3>
-        <nav className="grid gap-2">
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Home
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            About
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Products
-          </Link>
-          <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-      </div>
-    </div>
-    <div className="container max-w-7xl mt-12 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-      <p>&copy; 2024 Acme Inc. All rights reserved.</p>
-      <p>
-        Built with{" "}
-        <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
-          Vercel
-        </Link>
-      </p>
-    </div>
-  </footer>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

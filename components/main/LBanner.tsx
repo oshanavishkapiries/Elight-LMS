@@ -1,4 +1,5 @@
 import { general } from "@/data/general";
+import GlobalImage from "../sub/GlobalImage";
 
 const LBanner = () => {
   return (
@@ -15,7 +16,13 @@ const LBanner = () => {
 
       {/* Right side */}
       <div className="w-full h-full order-1 md:order-2 justify-center flex p-5 md:p-0">
-        <img src={general.img.lbanner_img} className="object-cover" />
+        <GlobalImage
+          src={general.img.lbanner_img}
+          alt={"card_img"}
+          width={1200}
+          height={800}
+          className="object-cover"
+        />
       </div>
     </div>
   );

@@ -3,25 +3,38 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import GlobalImage from "@/components/sub/GlobalImage";
+import Link from "next/link";
 
 const LoginPage = () => {
   return (
     <div className="w-full min-h-screen flex justify-center items-center bg-gray-100">
-      <Card className="w-4/5 md:w-2/3 h-auto grid grid-cols-1 md:grid-cols-2 overflow-hidden">
-        <div className="w-full h-[450px] hidden md:block">
-          <Image
-            src={general.img.login_img}
-            alt="Image"
-            width="1920"
-            height="1080"
-            className="h-full w-full object-cover"
-          />
+      <Card className="max-w-[610px] w-full h-full mx-2 md:h-[400px] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+        {/* left image */}
+        <div className="w-full h-full overflow-hidden">
+        <GlobalImage
+          src={general.img.login_img}
+          alt={"card_img"}
+          width={1200}
+          height={800}
+          className="w-full object-cover hidden md:block"
+        />
         </div>
-        <div className="w-full h-[450px] flex justify-center items-center">
-          <div className=" grid w-[350px] px-5 gap-6">
+        {/* right section */}
+        <div className="w-full flex flex-col justify-center items-center py-10">
+          <Link href={"/"}>
+            <GlobalImage
+              src={general.img.logo_img}
+              alt={"logo"}
+              width={50}
+              height={50}
+              className="h-32 w-32 object-cover"
+            />
+          </Link>
+          <div className="grid px-5 gap-6">
             <div className="grid gap-2 text-center">
               <h1 className="text-3xl font-bold">Login</h1>
-              <p className="text-balance text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 Please Login to continue.
               </p>
             </div>
