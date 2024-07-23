@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -29,10 +29,9 @@ const GlobalImage: React.FC<GlobalImageProps> = ({
         alt={alt}
         width={width}
         height={height}
-        onLoadingComplete={() => setImageLoaded(true)}
+        onLoad={() => setImageLoaded(true)}
         className={`object-cover ${imageLoaded ? "opacity-100" : "opacity-0"}`}
         style={{ transition: "opacity 0.3s" }}
-        layout="responsive"
       />
     </div>
   );

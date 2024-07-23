@@ -1,4 +1,3 @@
-import { BookIcon } from "lucide-react";
 import Link from "next/link";
 import { dashBoardNavData } from "@/data/dashBoardNavData";
 import GlobalImage from "@/components/sub/GlobalImage";
@@ -6,10 +5,10 @@ import { general } from "@/data/general";
 
 const Sider = () => {
   return (
-    <div className=" flex-col border-r bg-background hidden md:block">
+    <div className="flex-col border-r bg-background hidden md:flex">
       <div className="flex h-16 items-center justify-center border-b">
         <Link
-          href="#"
+          href="/dashboard"
           className="flex items-center gap-2 font-semibold"
           prefetch={false}
         >
