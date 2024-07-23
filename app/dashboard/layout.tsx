@@ -1,4 +1,35 @@
-import React from "react";
+import Link from "next/link";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import {
+  Table,
+  TableHeader,
+  TableRow,
+  TableHead,
+  TableBody,
+  TableCell,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import Sider from "@/components/main/dashboard/Sider";
+import {
+  AwardIcon,
+  BellIcon,
+  BookOpenIcon,
+  CalendarIcon,
+  FileTextIcon,
+  LayoutGridIcon,
+  MessageCircleIcon,
+  SearchIcon,
+} from "lucide-react";
+import Nav from "@/components/main/dashboard/Nav";
 
 const layout = ({
   children,
@@ -7,15 +38,17 @@ const layout = ({
 }>) => {
   return (
     <>
-      <main className="min-h-screen w-full flex flex-row">
+      <main className="grid min-h-screen w-full md:grid-cols-[240px_1fr] overflow-hidden">
         {/* sider */}
-        <section className="bg-red-400 w-[250px] h-screen">
 
-        </section>
+        <Sider />
+
         {/* dashboard-pages */}
-        <section className="bg-green-400 w-full h-screen">
-          {children}
-        </section>
+        <div className="flex flex-col">
+          {/* navbar */}
+          <Nav />
+          <main className="flex-1 overflow-auto">{children}</main>
+        </div>
       </main>
     </>
   );
