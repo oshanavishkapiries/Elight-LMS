@@ -26,6 +26,6 @@ export const dashBoardNavData: IdashBoardNavData[] = [
     icon: SettingsIcon,
     label: "Settings",
     href: "#"
-  }
+  },
 ];
 

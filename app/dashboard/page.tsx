@@ -92,75 +92,91 @@ const DashboardPage = () => {
           </CardFooter>
         </Card>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Recent Activity</CardTitle>
-          <CardDescription>
-            View your recent class and assignment activity.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Activity</TableHead>
-                <TableHead>Date</TableHead>
-                <TableHead>Status</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell>
-                  <div className="font-medium">Submitted Assignment</div>
-                  <div className="text-sm text-muted-foreground">
-                    Math Homework
-                  </div>
-                </TableCell>
-                <TableCell className="whitespace-nowrap">2023-04-15</TableCell>
-                <TableCell>
-                  <Badge variant="secondary">Completed</Badge>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  <div className="font-medium">Attended Class</div>
-                  <div className="text-sm text-muted-foreground">
-                    History Lecture
-                  </div>
-                </TableCell>
-                <TableCell className="whitespace-nowrap">2023-04-12</TableCell>
-                <TableCell>
-                  <Badge variant="secondary">Present</Badge>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  <div className="font-medium">Viewed Lesson</div>
-                  <div className="text-sm text-muted-foreground">
-                    Biology Chapter 3
-                  </div>
-                </TableCell>
-                <TableCell className="whitespace-nowrap">2023-04-10</TableCell>
-                <TableCell>
-                  <Badge variant="outline">Incomplete</Badge>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>
-                  <div className="font-medium">Submitted Quiz</div>
-                  <div className="text-sm text-muted-foreground">
-                    English Literature
-                  </div>
-                </TableCell>
-                <TableCell className="whitespace-nowrap">2023-04-05</TableCell>
-                <TableCell>
-                  <Badge variant="secondary">Passed</Badge>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
+
+      <div className="overflow-x-scroll ">
+        <Card >
+          <CardHeader>
+            <CardTitle>Recent Activity</CardTitle>
+            <CardDescription>
+              View your recent class and assignment activity.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Activity</TableHead>
+                  <TableHead>Date</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Status</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>
+                    <div className="font-medium">Submitted Assignment</div>
+                    <div className="text-sm text-muted-foreground">
+                      Math Homework
+                    </div>
+                  </TableCell>
+                  <TableCell className="whitespace-nowrap">
+                    2023-04-15
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="secondary">Completed</Badge>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    <div className="font-medium">Attended Class</div>
+                    <div className="text-sm text-muted-foreground">
+                      History Lecture
+                    </div>
+                  </TableCell>
+                  <TableCell className="whitespace-nowrap">
+                    2023-04-12
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="secondary">Present</Badge>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    <div className="font-medium">Viewed Lesson</div>
+                    <div className="text-sm text-muted-foreground">
+                      Biology Chapter 3
+                    </div>
+                  </TableCell>
+                  <TableCell className="whitespace-nowrap">
+                    2023-04-10
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="outline">Incomplete</Badge>
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>
+                    <div className="font-medium">Submitted Quiz</div>
+                    <div className="text-sm text-muted-foreground">
+                      English Literature
+                    </div>
+                  </TableCell>
+                  <TableCell className="whitespace-nowrap">
+                    2023-04-05
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="secondary">Passed</Badge>
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };
