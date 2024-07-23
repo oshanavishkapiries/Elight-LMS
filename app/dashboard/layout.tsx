@@ -38,9 +38,11 @@ const layout = ({
 }>) => {
   return (
     <>
-      <main className="grid min-h-screen w-full grid-cols-[240px_1fr] overflow-hidden">
+      <main className="grid min-h-screen w-full md:grid-cols-[240px_1fr] overflow-hidden">
         {/* sider */}
+
         <Sider />
+
         {/* dashboard-pages */}
         <div className="flex flex-col">
           {/* navbar */}

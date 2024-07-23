@@ -6,7 +6,7 @@ import { general } from "@/data/general";
 
 const Sider = () => {
   return (
-    <div className="flex flex-col border-r bg-background">
+    <div className=" flex-col border-r bg-background hidden md:block">
       <div className="flex h-16 items-center justify-center border-b">
         <Link
           href="#"
