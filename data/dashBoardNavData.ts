@@ -1,4 +1,8 @@
-import { LayoutGridIcon, BookOpenIcon, UserIcon, SettingsIcon } from "lucide-react";
+import {
+  LayoutGridIcon,
+  BookOpenIcon,
+  SettingsIcon,
+} from "lucide-react";
 
 interface IdashBoardNavData {
   icon: any;
@@ -10,22 +14,16 @@ export const dashBoardNavData: IdashBoardNavData[] = [
   {
     icon: LayoutGridIcon,
     label: "Class",
-    href: "#"
+    href: "#",
   },
   {
     icon: BookOpenIcon,
     label: "Lessons",
-    href: "#"
-  },
-  {
-    icon: UserIcon,
-    label: "Profile",
-    href: "#"
+    href: "#",
   },
   {
     icon: SettingsIcon,
     label: "Settings",
-    href: "#"
+    href: "#",
   },
 ];
-
