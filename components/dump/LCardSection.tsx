@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Card from "../sub/Card";
+import Card from "../sub/CustomCard";
 import {
   Carousel,
   CarouselContent,
@@ -23,7 +23,7 @@ const LCardSection = () => {
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent className="-ml-1">
-        {Array.from({ length: 5 }).map((_, index) => (
+        {Array.from({ length: 7 }).map((_, index) => (
           <CarouselItem key={index} className="pl-1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
             <div className="p-1">
               <Card />

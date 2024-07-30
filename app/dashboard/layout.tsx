@@ -1,7 +1,7 @@
-import Nav from "@/components/main/dashboard/Nav";
-import { MobileBottomNav } from "@/components/main/dashboard/MobileBottomNav";
-import MobileNav from "@/components/main/dashboard/MobileNav";
-import Sider from "@/components/main/dashboard/Sider";
+import Nav from "@/components/main/Nav";
+import { MobileBottomNav } from "@/components/main/MobileBottomNav";
+import MobileNav from "@/components/main/MobileNav";
+import Sider from "@/components/main/Sider";
 
 const layout = ({
   children,

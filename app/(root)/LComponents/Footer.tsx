@@ -1,7 +1,7 @@
 import { MountainIcon } from "lucide-react";
 import Link from "next/link";
 import { footerData } from "@/data/footerData";
-import GlobalImage from "../sub/GlobalImage";
+import GlobalImage from "../../../components/sub/GlobalImage";
 
 const Footer = () => {
   return (
