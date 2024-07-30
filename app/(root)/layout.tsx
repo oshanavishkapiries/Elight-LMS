@@ -1,5 +1,5 @@
-import Footer from "@/components/main/Footer";
-import Navbar from "@/components/main/Navbar";
+import Footer from "@/app/(root)/LComponents/Footer";
+import Navbar from "@/app/(root)/LComponents/Navbar";
 import React from "react";
 
 const layout = ({
@@ -10,7 +10,7 @@ const layout = ({
   return (
     <>
       <Navbar />
-      <main className="min-h-screen max-w-7xl mx-auto px-2 sm:px-5 md:px-7">
+      <main className="w-full">
         {children}
       </main>
       <Footer />

@@ -5,7 +5,7 @@ import { MenuIcon } from "lucide-react";
 
 import { navLinks } from "@/data/navLinks";
 import { general } from "@/data/general";
-import GlobalImage from "../sub/GlobalImage";
+import GlobalImage from "../../../components/sub/GlobalImage";
 
 const MobileNav = () => {
   return (
