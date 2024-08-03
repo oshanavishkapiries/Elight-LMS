@@ -1,9 +1,14 @@
 import Link from "next/link";
 import { dashBoardNavData } from "@/data/dashBoardNavData";
-import GlobalImage from "@/components/sub/GlobalImage";
 import { general } from "@/data/general";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Sider = () => {
+
+  const pathname = usePathname();
+
   return (
     <div className="flex-col border-r bg-background hidden md:flex">
       <div className="flex h-16 items-center justify-center border-b">
@@ -12,7 +17,7 @@ const Sider = () => {
           className="flex items-center gap-2 font-semibold"
           prefetch={false}
         >
-          <GlobalImage
+          <Image
             src={general.img.logo_img}
             className="h-10 w-10"
             alt={"logo"}
@@ -25,14 +30,18 @@ const Sider = () => {
       <nav className="flex flex-1 flex-col">
         {dashBoardNavData.map((item, index) => {
           const IconComponent = item.icon;
+          const isActive = pathname === item.href;
           return (
             <Link
               key={index}
               href={item.href}
-              className="flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-muted"
+              className={cn(
+                "flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-muted",
+                isActive && "bg-muted font-semibold text-primary"
+              )}
               prefetch={false}
             >
-              <IconComponent className="h-5 w-5" />
+              <IconComponent className={cn("h-5 w-5", isActive && "animate-icon-zoom")} />
               <span>{item.label}</span>
             </Link>
           );
