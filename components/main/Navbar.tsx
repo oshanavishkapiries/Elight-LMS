@@ -5,7 +5,7 @@ import { MenuIcon } from "lucide-react";
 
 import { navLinks } from "@/data/navLinks";
 import { general } from "@/data/general";
-import GlobalImage from "../../../components/sub/GlobalImage";
+import Image from "next/image";
 
 const MobileNav = () => {
   return (
@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <header className="flex h-16 w-full items-center justify-between bg-background px-4 sm:px-6">
       <Link href="/" className="flex items-center gap-2" prefetch={false}>
-        <GlobalImage
+        <Image
           src={general.img.logo_img}
           className="h-10 w-10"
           alt={"logo"}

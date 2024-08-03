@@ -1,7 +1,6 @@
-import { MountainIcon } from "lucide-react";
 import Link from "next/link";
 import { footerData } from "@/data/footerData";
-import GlobalImage from "../../../components/sub/GlobalImage";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,7 +8,7 @@ const Footer = () => {
       <div className="container max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="flex flex-col items-start gap-4">
           <Link href={footerData.company.link} className="flex items-center gap-2" prefetch={false}>
-          <GlobalImage
+          <Image
           src={footerData.company.logo}
           className="h-10 w-10"
           alt={"logo"}
