@@ -36,8 +36,8 @@ const Sider = () => {
               key={index}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-muted",
-                isActive && "bg-muted font-semibold text-primary"
+                "flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-md mx-2 mt-1 hover:ps-6 transition-all",
+                isActive && "bg-primary font-semibold text-white"
               )}
               prefetch={false}
             >

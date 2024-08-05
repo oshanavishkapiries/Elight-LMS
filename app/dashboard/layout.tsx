@@ -21,7 +21,7 @@ const layout = ({
         <div className="flex flex-col">
           {isMobile ? <MobileNav /> : <Nav />}
 
-          <main className="flex-1 overflow-auto">{children}</main>
+          <main className="flex-1 overflow-auto bg-muted">{children}</main>
           {isMobile ? <MobileBottomNav /> : <></>}
         </div>
       </main>
