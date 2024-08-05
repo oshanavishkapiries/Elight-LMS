@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import Link from "next/link";
 import { mobileBottomNav } from "@/data/mobileBottomNav";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export function MobileBottomNav() {
+  const pathname = usePathname();
   return (
     <div className="fixed bottom-0 left-0 z-50 w-full bg-card shadow-lg md:hidden">
       <div className="flex h-16 items-center justify-around">
@@ -17,13 +20,20 @@ export function MobileBottomNav() {
                     <span className="sr-only">{item.label}</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="bottom" className="bg-card rounded-t-xl mx-2">
+                <SheetContent
+                  side="bottom"
+                  className="bg-card rounded-t-xl mx-2"
+                >
                   <div className="grid gap-4 p-4">
                     {item.sheetItems.map((sheetItem, sheetIndex) => (
                       <Link
                         key={sheetIndex}
                         href={sheetItem.href}
-                        className="flex items-center gap-2 rounded-md bg-muted px-3 py-2 text-sm font-medium transition-colors hover:bg-muted-foreground hover:text-card-foreground"
+                        className={cn(
+                          "flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-md hover:ps-6 transition-all",
+                          pathname === sheetItem.href &&
+                            "bg-primary font-semibold text-white"
+                        )}
                         prefetch={false}
                       >
                         <sheetItem.icon className="h-5 w-5" />

@@ -8,31 +8,20 @@ import Link from "next/link";
 const LoginPage = () => {
   return (
     <div className="w-full min-h-screen flex justify-center items-center bg-gray-100">
-      <Card className="max-w-[610px] w-full h-full mx-2 md:h-[400px] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
-        {/* left image */}
-        <div className="w-full h-full overflow-hidden">
-          <GlobalImage
-            src={general.img.login_img}
-            alt={"card_img"}
-            width={1200}
-            height={800}
-            className="w-full object-cover hidden md:block"
-          />
-        </div>
-        {/* right section */}
+      <Card className="max-w-[410px] w-full h-full mx-2 overflow-hidden">
+       
         <div className="w-full flex flex-col justify-center items-center py-10">
           <Link href={"/"}>
             <GlobalImage
               src={general.img.logo_img}
               alt={"logo"}
               width={1500}
-              height={1500}
-              className="h-32 w-32 object-cover"
+              height={1000}
+              className="max-w-[120px] object-cover mb-5"
             />
           </Link>
           <div className="grid px-5 gap-6">
             <div className="grid gap-2 text-center">
-              <h1 className="text-3xl font-bold">Login</h1>
               <p className="text-sm text-muted-foreground">
                 Please Login to continue.
               </p>
@@ -40,7 +29,7 @@ const LoginPage = () => {
 
             <Button
               variant="outline"
-              className="w-full flex gap-2 bg-muted hover:bg-primary hover:text-white"
+              className="w-full flex gap-2 bg-muted hover:scale-110 transition-transform"
             >
               <Image
                 src="/svg/google.svg"

@@ -10,12 +10,11 @@ const Footer = () => {
           <Link href={footerData.company.link} className="flex items-center gap-2" prefetch={false}>
           <Image
           src={footerData.company.logo}
-          className="h-10 w-10"
+          className="max-w-[120px]"
           alt={"logo"}
-          width={40}
+          width={120}
           height={40}
         />
-            <span className="text-lg font-semibold">{footerData.company.name}</span>
           </Link>
         </div>
         {footerData.sections.map((section, index) => (

@@ -1,18 +1,18 @@
 import {
   BellIcon,
   BookOpenIcon,
-  CalendarIcon,
   HomeIcon,
-  InboxIcon,
-  LayoutGridIcon,
+  Info,
+  LibraryBig,
   MenuIcon,
+  Phone,
   SearchIcon,
   SettingsIcon,
 } from "lucide-react";
 
 export const mobileBottomNav = [
   {
-    href: "#",
+    href: "/dashboard",
     label: "Home",
     icon: HomeIcon,
   },
@@ -27,24 +27,34 @@ export const mobileBottomNav = [
     isSheetTrigger: true,
     sheetItems: [
       {
-        icon: LayoutGridIcon,
+        icon: LibraryBig,
         label: "Class",
-        href: "#",
+        href: "/dashboard/class",
       },
       {
         icon: BookOpenIcon,
         label: "Lessons",
-        href: "#",
+        href: "/dashboard/lesson",
+      },
+      {
+        icon: Phone,
+        label: "Contact",
+        href: "/dashboard/contacts",
+      },
+      {
+        icon: Info,
+        label: "How To",
+        href: "/dashboard/how-to",
       },
     ],
   },
   {
-    href: "#",
+    href: "/dashboard/notification",
     label: "Notifications",
     icon: BellIcon,
   },
   {
-    href: "#",
+    href: "/dashboard/settings",
     label: "Settings",
     icon: SettingsIcon,
   },

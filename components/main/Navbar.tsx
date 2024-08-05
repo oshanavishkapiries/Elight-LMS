@@ -45,12 +45,11 @@ const Navbar = () => {
       <Link href="/" className="flex items-center gap-2" prefetch={false}>
         <Image
           src={general.img.logo_img}
-          className="h-10 w-10"
+          className="max-w-[120px]"
           alt={"logo"}
-          width={40}
+          width={120}
           height={40}
         />
-        <span className="text-lg font-semibold">Elight LMS</span>
       </Link>
       <nav className="hidden items-center gap-6 md:flex">
         {navLinks.map((link) => (

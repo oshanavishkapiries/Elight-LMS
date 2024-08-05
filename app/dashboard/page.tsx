@@ -1,5 +1,5 @@
 const DashboardPage = () => {
-  return <div>DashBoard</div>;
+  return <div className="w-full min-h-[1000px]">DashBoard</div>;
 };
 
 export default DashboardPage;

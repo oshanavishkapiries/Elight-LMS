@@ -6,25 +6,23 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const Sider = () => {
-
   const pathname = usePathname();
 
   return (
     <div className="flex-col border-r bg-background hidden md:flex">
       <div className="flex h-16 items-center justify-center border-b">
         <Link
-          href="/dashboard"
+          href="/"
           className="flex items-center gap-2 font-semibold"
           prefetch={false}
         >
           <Image
             src={general.img.logo_img}
-            className="h-10 w-10"
+            className="max-w-[120px]"
             alt={"logo"}
-            width={40}
+            width={120}
             height={40}
           />
-          <span className="text-lg font-semibold">Elight LMS</span>
         </Link>
       </div>
       <nav className="flex flex-1 flex-col">
@@ -41,7 +39,9 @@ const Sider = () => {
               )}
               prefetch={false}
             >
-              <IconComponent className={cn("h-5 w-5", isActive && "animate-icon-zoom")} />
+              <IconComponent
+                className={cn("h-5 w-5", isActive && "animate-icon-zoom")}
+              />
               <span>{item.label}</span>
             </Link>
           );

@@ -15,13 +15,13 @@ const layout = ({
 
   return (
     <>
-      <main className="grid min-h-screen w-full md:grid-cols-[240px_1fr] overflow-hidden">
+      <main className="grid min-h-screen w-full md:grid-cols-[240px_1fr] overflow-hidden fixed">
         {isMobile ? <></> : <Sider />}
 
-        <div className="flex flex-col">
+        <div className="flex flex-col h-screen">
           {isMobile ? <MobileNav /> : <Nav />}
 
-          <main className="flex-1 overflow-auto bg-muted">{children}</main>
+          <main className="flex-1 overflow-y-auto bg-muted">{children}</main>
           {isMobile ? <MobileBottomNav /> : <></>}
         </div>
       </main>
