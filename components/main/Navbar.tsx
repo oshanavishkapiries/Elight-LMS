@@ -41,7 +41,7 @@ const MobileNav = () => {
 
 const Navbar = () => {
   return (
-    <header className="flex h-16 w-full items-center justify-between bg-background px-4 sm:px-6">
+    <header className="flex h-16 w-full items-center justify-between bg-background px-4 sm:px-6 border-b-4 border-primary/75">
       <Link href="/" className="flex items-center gap-2" prefetch={false}>
         <Image
           src={general.img.logo_img}

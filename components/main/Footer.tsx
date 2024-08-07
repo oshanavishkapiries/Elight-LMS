@@ -10,7 +10,7 @@ const Footer = () => {
           <Link href={footerData.company.link} className="flex items-center gap-2" prefetch={false}>
           <Image
           src={footerData.company.logo}
-          className="max-w-[120px]"
+          className="max-w-[85px] grayscale"
           alt={"logo"}
           width={120}
           height={40}
