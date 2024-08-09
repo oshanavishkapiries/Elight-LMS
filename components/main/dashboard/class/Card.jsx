@@ -1,12 +1,10 @@
 import Link from 'next/link'
 import Image from "next/image";
 
-
-
 const Card = ({ title, image, year, colorTo = "ffffff", colorFrom = "000000" ,id}) => {
   return (
     <div
-      className="h-48 w-full flex justify-between p-5 rounded-xl"
+      className="h-48 w-full flex justify-between p-3 rounded-md"
       style={{
         background: `linear-gradient(to right, #${colorFrom}, #${colorTo})`,
       }}
@@ -17,7 +15,7 @@ const Card = ({ title, image, year, colorTo = "ffffff", colorFrom = "000000" ,id
           <h1 className="text-base text-white">{year}</h1>
         </div>
         <div>
-          <Link href={`class/${id}`} className="bg-[#2C9AFF] font-semibold text-white px-4 py-1 rounded">
+          <Link href={`class/${id}`} style={{background: '#2C9AFF'}} className=" font-semibold text-white px-4 py-1 rounded-sm">
             Watch Now
           </Link>
         </div>
